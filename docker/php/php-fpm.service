@@ -1,0 +1,13 @@
+[Unit]
+Description=Serviço do PHP-FPM
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/local/sbin/php-fpm
+
+[Install]
+WantedBy=multi-user.target
